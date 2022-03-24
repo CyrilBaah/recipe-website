@@ -3,6 +3,7 @@ const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const port = process.env.PORT || 4000;
 require("dotenv").config();
+require('./server/config/database')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
