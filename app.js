@@ -12,8 +12,13 @@ app.use(expressLayouts)
 app.set('layout', './layouts/main')
 app.set('view engine', 'ejs')
 
-const routes = require('./server/routes/recipeRoutes')
-app.use('/', routes)
+const indexRoute = require('./server/routes/recipeRoutes')
+const categoryRoute = require('./server/routes/category')
+
+app.use('/', indexRoute)
+app.use(categoryRoute)
+
+
 
 app.listen(port, () => {
     console.log(`listening on http://localhost:${port}`);
