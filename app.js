@@ -12,7 +12,7 @@ app.use(expressLayouts)
 app.set('layout', './layouts/main')
 app.set('view engine', 'ejs')
 
-const indexRoute = require('./server/routes/recipeRoutes')
+const indexRoute = require('./server/routes/recipe')
 const categoryRoute = require('./server/routes/category')
 
 app.use('/', indexRoute)
