@@ -17,10 +17,10 @@ exports.homePage = async (req, res) => {
 };
 
 /**
- * Dummy Data Example
+ * Dummy Data Example - CategoryData
  */
 
-async function insertDymmyCategoryData() {
+async function insertDummyCategoryData() {
   try {
     await Category.insertMany([
       {
@@ -53,4 +53,44 @@ async function insertDymmyCategoryData() {
   }
 }
 
-// insertDymmyCategoryData();
+/**
+ * Dummy Data Example - RecipeData
+ */
+
+async function insertDummyRecipeData(){
+  try {
+    await Recipe.insertMany([
+      {
+        "name": "Recipe Name Goes Here",
+        "description": `Recipe Description Goes Here`,
+        "email": "recipeemail@raddy.co.uk",
+        "ingredients": [
+          "1 level teaspoon baking powder",
+          "1 level teaspoon cayenne pepper",
+          "1 level teaspoon hot smoked paprika",
+        ],
+        "category": "American",
+        "image": "southern-friend-chicken.jpg"
+      },
+      {
+        "name": "Recipe Name Goes Here",
+        "description": `Recipe Description Goes Here`,
+        "email": "recipeemail@raddy.co.uk",
+        "ingredients": [
+          "1 level teaspoon baking powder",
+          "1 level teaspoon cayenne pepper",
+          "1 level teaspoon hot smoked paprika",
+        ],
+        "category": "American",
+        "image": "southern-friend-chicken.jpg"
+      },
+    ]);
+  } catch (error) {
+    console.log('err', + error)
+  }
+}
+
+// insertDummyRecipeData();
+
+
+// insertDummyCategoryData();
