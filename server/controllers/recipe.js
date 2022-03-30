@@ -1,5 +1,7 @@
 require("../config/database");
 const Category = require("../models/category");
+const Recipe = require("../models/recipe");
+
 
 /**
  * GET /
@@ -90,7 +92,7 @@ async function insertDummyRecipeData(){
   }
 }
 
-// insertDummyRecipeData();
+insertDummyRecipeData();
 
 
 // insertDummyCategoryData();
