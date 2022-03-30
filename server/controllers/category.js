@@ -8,7 +8,9 @@ const Category = require("../models/category");
 
 exports.explore = async (req, res) => {
   try {
-    res.render("category", { title: "Recipe Website - Category" });
+    const limitNumber = 20;
+    const categories = await Category.find({}).limit(limitNumber);
+    res.render("category", { title: "Recipe Website - Category", categories });
   } catch (error) {
     res.status(500).send({ message: error.message || "Error Occured" });
   }
