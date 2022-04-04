@@ -7,5 +7,7 @@ const recipeController = require("../controllers/recipe");
  */
 
 router.get("/", recipeController.homePage);
+router.get("/recipe/:id", recipeController.getRecipe);
+
 
 module.exports = router;
