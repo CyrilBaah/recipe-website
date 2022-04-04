@@ -92,7 +92,7 @@ async function insertDummyRecipeData(){
   }
 }
 
-insertDummyRecipeData();
+// insertDummyRecipeData();
 
 
 // insertDummyCategoryData();
